@@ -7,8 +7,7 @@ const Appointment = (props) => {
   return (
     <View style={styles.appointmentCard} >
       <View style={styles.appointmentHeader}>
-        <Text style={styles.service}>{props.item.service}</Text> 
-        <Text style={styles.doctor}>{props.item.doctor}</Text>
+        <Text style={styles.service}>{props.item.service} - {props.item.doctor}</Text> 
       </View>
       <Text style={styles.specialty}>{props.item.specialty}</Text>
       <View style={styles.appointmentFooter}>
@@ -23,7 +22,7 @@ const Appointment = (props) => {
             </View>
         </View>
         <View>
-          <Button title="Cancelar Reserva" onPress={() => Alert.alert('Cancelar Reserva')} />
+          <Button type="danger" title="Cancelar Reserva" onPress={() => Alert.alert('Cancelar Reserva')} />
         </View>
 
       </View>
@@ -49,12 +48,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginLeft: 10,
     }, 
-    doctor: {
-        fontSize: FONT_SIZE.lg,
-        color: COLORS.gray1,
-        fontWeight: 'bold',
-        marginLeft: 10,
-    },
     specialty: {
         fontSize: FONT_SIZE.md,
         color: COLORS.gray3,

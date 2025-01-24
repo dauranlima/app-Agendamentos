@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Image,FlatList } from 'react-
 import { COLORS, FONT_SIZE } from '../constants/theme';
 import { doctors } from '../constants/data.js';
 import Doctor from '../components/Doctor.jsx';
+import icon from '../constants/icon.js';
 
 const AbaHome = () => {
 
@@ -33,7 +34,6 @@ const styles = StyleSheet.create({
     color: COLORS.gray1,
     fontWeight: 'bold',
     marginBottom: 20,
-    marginTop: 25,
     },
 
 })

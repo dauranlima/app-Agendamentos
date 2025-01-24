@@ -7,14 +7,14 @@ export default function Button(props) {
   }
 
   return (
-    <TouchableOpacity onPress={handlePress} style={styles.container}>
-      <Text style={styles.text}>{props.title}</Text>
+      <TouchableOpacity onPress={handlePress}
+      style={[styles.container, props.type === 'danger' ? styles.danger : styles.primary]}>
+        <Text style={styles.text}>{props.title}</Text>
     </TouchableOpacity>
   )
   }
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: COLORS.blue,
     padding: 12,
     borderRadius: 6,
     marginVertical: 10,
@@ -25,5 +25,11 @@ const styles = StyleSheet.create({
     fontSize: FONT_SIZE.md,
     textAlign: 'center',
     fontWeight: 'bold',
+  },
+  danger: {
+    backgroundColor: COLORS.red,
+  },
+  primary: {
+    backgroundColor: COLORS.blue,
   },
 })

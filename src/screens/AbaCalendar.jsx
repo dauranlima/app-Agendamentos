@@ -8,7 +8,6 @@ const AbaCalendar = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Minhas Reservas</Text>
       <FlatList
         showsVerticalScrollIndicator={false}
         data={appointments}
@@ -29,13 +28,6 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     justifyContent: 'space-between',
   },
-  title: {
-    fontSize: FONT_SIZE.md,
-    color: COLORS.gray1,
-    fontWeight: 'bold',
-    marginBottom: 20,
-    marginTop: 25,
-    },
   appointmentCard: {
         backgroundColor: COLORS.white,
         padding: 10,
